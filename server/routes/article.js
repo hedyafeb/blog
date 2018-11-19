@@ -8,7 +8,7 @@ router.get('/', articleController.read)
 router.post('/myArticles', isAuthenticated, articleController.readMyArticles)
 router.delete('/:articleID', isAuthenticated, articleController.deleteOne)
 router.get('/:articleID', articleController.readOne)
-router.put('/:articleID', articleController.update)
+router.put('/:articleID', isAuthenticated, articleController.update)
 
 
 router.post('/:articleID/addComment', isAuthenticated, commentController.createComment) 
