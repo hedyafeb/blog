@@ -24,7 +24,8 @@ export default {
         getMyArticles: function() {
             axios({
                 method: 'POST',
-                url: `http://localhost:3000/article/myArticles`,
+                // url: `http://localhost:3000/article/myArticles`,
+                url: `https://blog-server.hedyafeb.me/article/myArticles`,
                 headers: {
                     accesstoken: localStorage.getItem('accesstoken')
                 }
@@ -41,7 +42,8 @@ export default {
         deleteArticle: function(articleID) {
             axios({
                 method: 'DELETE',
-                url: `http://localhost:3000/article/${articleID}`
+                // url: `http://localhost:3000/article/${articleID}`
+                url: `https://blog-server.hedyafeb.me/article/${articleID}`
             })
             .then( response => {
                 this.getMyArticles()

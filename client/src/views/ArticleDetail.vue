@@ -63,7 +63,8 @@ export default {
         getArticle: function(articleID) {
             axios({
                 method: 'GET',
-                url: `http://localhost:3000/article/${articleID}`
+                // url: `http://localhost:3000/article/${articleID}`
+                url: `https://blog-server.hedyafeb.me/article/${articleID}`
             })
             .then( response => {
                 this.article = response.data
@@ -76,7 +77,8 @@ export default {
         getComments: function(articleID) {
             axios({
                 method: 'GET',
-                url: `http://localhost:3000/article/${articleID}/comments`,
+                // url: `http://localhost:3000/article/${articleID}/comments`,
+                url: `https://blog-server.hedyafeb.me/article/${articleID}/comments`,
             })
             .then( response => {
                 console.log(response.data); 
@@ -90,7 +92,8 @@ export default {
         postComment: function() {
             axios({
                 method: 'POST',
-                url: `http://localhost:3000/article/${this.$route.params.articleID}/addComment`,
+                // url: `http://localhost:3000/article/${this.$route.params.articleID}/addComment`,
+                url: `https://blog-server.hedyafeb.me/article/${this.$route.params.articleID}/addComment`,
                 data: {
                     title: this.inputComment.title,
                     detail: this.inputComment.detail 

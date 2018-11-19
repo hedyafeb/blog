@@ -33,7 +33,8 @@ export default {
     getArticles: function() {
       axios({
         method: 'GET',
-        url: 'http://localhost:3000/article'
+        // url: 'http://localhost:3000/article'
+        url: 'https://blog-server.hedyafeb.me/article'
       })
       .then( response => {
         this.articles = response.data

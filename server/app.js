@@ -7,10 +7,13 @@ const mongoose = require('mongoose')
 const routes = require('./routes')
 
 
+
 // mongoose.connect('mongodb://localhost/blog-hacktiv', { useNewUrlParser: true})
 mongoose.connect(`mongodb://${process.env.MLAB_user}:${process.env.MLAB_password}@ds157503.mlab.com:57503/blog-hedya-database`, { useNewUrlParser: true})
 
+
 const db = mongoose.connection;
+
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log(`mongoose is connected`);

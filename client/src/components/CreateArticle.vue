@@ -36,7 +36,8 @@ export default {
         postArticle: function() {
             axios({
                 method: 'POST',
-                url: `http://localhost:3000/article`,
+                // url: `http://localhost:3000/article`,
+                url: `https://blog-server.hedyafeb.me/article`,
                 data: {
                     title: this.article.title,
                     detail: this.article.detail

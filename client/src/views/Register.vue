@@ -45,7 +45,8 @@
             register () {
                 axios({
                     method: 'POST',
-                    url: 'http://localhost:3000/register',
+                    // url: 'http://localhost:3000/register',
+                    url: 'https://blog-server.hedyafeb.me/register',
                     data: {
                         email: this.registerData.email,
                         password: this.registerData.password,

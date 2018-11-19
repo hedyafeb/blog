@@ -40,7 +40,8 @@
             login() {
                 axios({
                     method: 'POST',
-                    url: 'http://localhost:3000/login',
+                    // url: 'http://localhost:3000/login',
+                    url: 'https://blog-server.hedyafeb.me/login',
                     data: {
                         email: this.loginData.email,
                         password: this.loginData.password

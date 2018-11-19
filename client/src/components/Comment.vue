@@ -32,7 +32,8 @@ export default {
         deleteComment: function() {
             axios({
                 method: 'DELETE',
-                url: `http://localhost:3000/article/${this.comment.articleID}/${this.comment._id}`,
+                // url: `http://localhost:3000/article/${this.comment.articleID}/${this.comment._id}`,
+                url: `https://blog-server.hedyafeb.me/article/${this.comment.articleID}/${this.comment._id}`,
                 headers: {
                     accesstoken: localStorage.getItem('accesstoken')
                 }
