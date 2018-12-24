@@ -1,5 +1,6 @@
 <template>
-    <div id="app">
+    <div id="app"> 
+      <!-- id="app" sbnernya ga usah, toh di index.html udah ada -->
       <div id="nav">
         <Navbar v-bind:userID="userID" v-bind:checktoken="checkToken"></Navbar>
       </div>

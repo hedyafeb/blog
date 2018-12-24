@@ -16,12 +16,12 @@
 <script>
 export default {
     props: ['comment'],
-    data() {
-        return {
-            currentUser: "",
-            enableDelete: false
-        }
-    },
+    // data() {
+    //     return {
+    //         currentUser: "",
+    //         enableDelete: false
+    //     }
+    // },
     methods: {
         showDeleteButton: function() {
             this.currentUser = localStorage.getItem('userID')
@@ -47,8 +47,8 @@ export default {
             })
         }
     },
-    mounted() {
-        this.showDeleteButton() 
-    }
+    // mounted() {
+    //     this.showDeleteButton() 
+    // }
 }
 </script>

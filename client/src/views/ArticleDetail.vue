@@ -34,7 +34,7 @@
                     </div>
 
                     <!-- POSTED COMMENT -->
-                    <Comment v-for="comment in comments" :comment="comment" :key="comment._id" v-on:deleteComment="getComments(article._id)"></Comment>
+                    <Comment v-for="comment in comments" :enableDelete="comment.userID._id === localStorage.getItem('userID')" :comment="comment" :key="comment._id" v-on:deleteComment="getComments(article._id)"></Comment>
                     {{ error }}
                 </div>
             </div>
@@ -103,8 +103,9 @@ export default {
                 }
             })
             .then( response => {
+                // { _id: ..., title: ... }
                 this.comments.push(response.data) 
-                this.getComments(this.$route.params.articleID)
+                // this.getComments(this.$route.params.articleID)
             })
             .catch( err => {
                 console.log(err);

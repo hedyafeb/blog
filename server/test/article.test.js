@@ -114,7 +114,7 @@ describe('article CRUD tests', function() {
             })
     })
 
-    // TESTING read ARTICLE:
+    // TESTING read ARTICLE: // check array atau ga aja
     it('should have success status 200 and have output of all articles', function(done) {
         chai.request(app)
             .get('/article')
